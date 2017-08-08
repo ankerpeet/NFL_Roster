@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFL Draft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 searchBar">
+                <div class="row">
+                    <div class="col-xs-1">
+                        <img class="logo" src="nfl.png" alt="nfl logo">
+                    </div>
+                    <div class="col-sm-11">
+                        <form class="form-inline inputText" onsubmit="app.controllers.controller.filterData(event)">
+                            <input placeholder="Name..." class="form-control" id="search-text" name="name" type="text">
+                            <select name="team" class="form-control">
+                                <option value="all">All Teams</option>
+                                <option value="FA">Free Agent</option>
+                                <option value="ARI">Arizona</option>
+                                <option value="ATL">Atlanta</option>
+                                <option value="BAL">Baltimore</option>
+                                <option value="BUF">Buffalo</option>
+                                <option value="CHI">Chicago</option>
+                                <option value="CIN">Cincinati</option>
+                                <option value="CLE">Cleveland</option>
+                                <option value="DAL">Dallas</option>
+                                <option value="DEN">Denver</option>
+                                <option value="DET">Detroit</option>
+                                <option value="GB">Green Bay</option>
+                                <option value="HOU">Houstan</option>
+                                <option value="IND">Indianapolis</option>
+                                <option value="JAC">Jacksonville</option>
+                                <option value="KC">Kansas City</option>
+                                <option value="LAC">Los Angeles Chargers</option>
+                                <option value="LAR">Los Angeles Rams</option>
+                                <option value="MIA">Miami</option>
+                                <option value="MIN">Minnesota</option>
+                                <option value="NE">New England</option>
+                                <option value="NO">New Orleans</option>
+                                <option value="NYG">New York Giants</option>
+                                <option value="NYJ">New York Jets</option>
+                                <option value="OAK">Oakland</option>
+                                <option value="PHI">Philadelphia</option>
+                                <option value="PIT">Pittsburg</option>
+                                <option value="SEA">Seattle</option>
+                                <option value="SF">San Fransisco</option>
+                                <option value="TB">Tampa Bay</option>
+                                <option value="TEN">Tennessee</option>
+                                <option value="WAS">Washington</option>                                                               
+                            </select>
+                            <select name="positions" class="form-control">
+                                <option value="all">All Positions</option>
+                                <option value="QB">Quarterback</option>
+                                <option value="RB">Running Back</option>
+                                <option value="WR">Wide Reciever</option>
+                            </select>
+                            <button class="btn btn-primary" id="submit-button" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-7 col-md-8">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row" id="search-results">
+                            <!--Marvel data here  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-5 col-md-4">
+                <h3>My Team</h3>
+                <div id="my-roster">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
